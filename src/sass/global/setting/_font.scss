@@ -1,0 +1,9 @@
+@font-face {
+  font-family: "XXXXXXXXXX";
+  src: url("../fonts/xxxxxxxxxx.ttf") format("truetype");
+}
+
+:root {
+  --font-base: "XXXXXXXXXX", sans-serif, Meiryo;
+  --font-heading: "XXXXXXXXXX", sans-serif;
+}

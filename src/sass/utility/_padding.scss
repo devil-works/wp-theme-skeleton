@@ -1,0 +1,50 @@
+.u-p {
+  &__t-8 {
+    padding-top: var(--base-size-16);
+  }
+  &__t-16 {
+    padding-top: var(--base-size-16);
+  }
+  &__t-32 {
+    padding-top: var(--base-size-32);
+  }
+  &__t-64 {
+    padding-top: var(--base-size-16);
+  }
+  &__e-8 {
+    padding-right: var(--base-size-16);
+  }
+  &__e-16 {
+    padding-right: var(--base-size-16);
+  }
+  &__e-32 {
+    padding-right: var(--base-size-32);
+  }
+  &__e-64 {
+    padding-right: var(--base-size-16);
+  }
+  &__b-8 {
+    padding-bottom: var(--base-size-16);
+  }
+  &__b-16 {
+    padding-bottom: var(--base-size-16);
+  }
+  &__b-32 {
+    padding-bottom: var(--base-size-32);
+  }
+  &__b-64 {
+    padding-bottom: var(--base-size-16);
+  }
+  &__s-8 {
+    padding-left: var(--base-size-16);
+  }
+  &__s-16 {
+    padding-left: var(--base-size-16);
+  }
+  &__s-32 {
+    padding-left: var(--base-size-32);
+  }
+  &__s-64 {
+    padding-left: var(--base-size-16);
+  }
+}

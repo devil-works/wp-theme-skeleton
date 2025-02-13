@@ -1,0 +1,36 @@
+:root {
+  --c-red-100: #cf183d;
+  --c-red-200: #dc2851;
+  --c-red-300: #e93b64;
+  --c-red-400: #f1557e;
+  --c-red-500: #f66e97;
+
+
+  // button
+  --c-button-primary: var(--c-red-100);
+  --c-button-secondary: #fff;
+
+  // text
+  --c-text-body: #000000d1;
+  --c-text-primary: var(--c-red-100);
+
+  // link
+
+  // バックグラウンドカラー
+  --c-bg-base: #fff;
+  --c-bg-neutral: var(--c-gray-300);
+  --c-bg-neutral-lighter: var(--c-gray-200);
+  --c-bg-neutral-lightest: var(--c-gray-100);
+  --c-bg-primary: var(--c-red-100);
+  --c-bg-primary-lighter: var(--c-red-200);
+
+  // 線色
+  --c-border-primary: var(--c-red-100);
+  --c-border-primary-lighter: var(--c-red-100);
+  --c-border-secondary: var(--c-red-100);
+  --c-border-secondary-lighter: var(--c-red-100);
+
+  --c-focus-shadow: #e9edef;
+
+  color-scheme: light;
+}
