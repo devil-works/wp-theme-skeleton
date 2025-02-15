@@ -15,9 +15,9 @@
 
 get_header();
 ?>
-
 <main class="l-main">
 </main>
+<!-- l-main -->
 
 <?php
 get_footer();

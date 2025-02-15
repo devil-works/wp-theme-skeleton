@@ -14,6 +14,7 @@ function enqueue_favicon_icons() {
 add_action('wp_head', 'enqueue_favicon_icons');
 
 /**
+<<<<<<< HEAD
  * JavaScript を読み込む
  */
 function enqueue_js() {
@@ -28,3 +29,25 @@ function enqueue_js() {
     wp_enqueue_script('common-js', get_template_directory_uri() . '/assets/js/common.js', array('jquery'), $common_version, true);
 }
 add_action('wp_enqueue_scripts', 'enqueue_js');
+=======
+ * JavaScriptをエンキューする関数
+ * 
+ */
+function enqueue_javascript() {
+    // jQuery のファイルパス
+    $jquery_file_path = get_template_directory() . '/assets/js/jquery.min.js'; 
+    $jquery_version = filemtime($jquery_file_path); // 最終更新日時を取得
+    wp_enqueue_script('jquery', get_template_directory_uri() . '/assets/js/jquery.min.js', array(), $jquery_version, true); // true は footer で読み込む設定
+    
+    // lazysizes のファイルパス
+    $lazysizes_file_path = get_template_directory() . '/assets/js/lazysizes.min.js'; 
+    $lazysizes_version = filemtime($lazysizes_file_path);
+    wp_enqueue_script('lazysizes', get_template_directory_uri() . '/assets/js/lazysizes.min.js', array(), $lazysizes_version, true);
+    
+    // common.js のファイルパス
+    $common_file_path = get_template_directory() . '/assets/js/common.js'; 
+    $common_version = filemtime($common_file_path);
+    wp_enqueue_script('common', get_template_directory_uri() . '/assets/js/common.js', array('jquery'), $common_version, true);
+}
+add_action('wp_enqueue_scripts', 'enqueue_javascript');
+>>>>>>> 7c49ae2 (Add enquing Common.js)

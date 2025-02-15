@@ -9,16 +9,9 @@
 
 get_header();
 ?>
-	<main class="l-main">
-		<?php
-		while ( have_posts() ) :
-			the_post();
+<main class="l-main">
+</main>
+<!-- l-main -->
 
-			get_template_part( 'template-parts/content', get_post_type() );
-
-		endwhile; 
-		?>
-	</main><!-- #l-main -->
 <?php
 get_footer();
-
