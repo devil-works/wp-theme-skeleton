@@ -29,8 +29,8 @@ function enqueue_js() {
 }
 add_action('wp_enqueue_scripts', 'enqueue_js');
 
-* JavaScriptをエンキューする関数
- * 
+/* 
+ * JavaScriptをエンキュー
  */
 function enqueue_javascript() {
     // jQuery のファイルパス
@@ -51,7 +51,7 @@ function enqueue_javascript() {
 add_action('wp_enqueue_scripts', 'enqueue_javascript');
 
 /**
- * 管理画面用のファビコンやアイコンを head に挿入
+ * 管理画面用のスタイルシートをエンキュー
  */
 function enqueue_admin_styleseets() {
     echo '<link rel="stylesheet" href="https://code.jquery.com/ui/1.14.1/themes/base/jquery-ui.css">';
@@ -59,7 +59,7 @@ function enqueue_admin_styleseets() {
 add_action('admin_head', 'enqueue_admin_styleseets');
 
 /**
- * 管理画面にJavaScriptをエンキューする関数
+ * 管理画面にJavaScriptをエンキュー
  * 
  */
 function enqueue_admin_javascript() {
