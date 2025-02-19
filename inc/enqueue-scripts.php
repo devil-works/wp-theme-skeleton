@@ -60,15 +60,23 @@ add_action('admin_head', 'enqueue_admin_styleseets');
 
 /**
  * 管理画面にJavaScriptをエンキュー
- * 
  */
 function enqueue_admin_javascript() {
     // jQuery のファイルパス
     $jquery_file_path = get_template_directory() . '/assets/js/jquery.min.js'; 
-    $jquery_version = filemtime($jquery_file_path); // 最終更新日時を取得
-    wp_enqueue_script('jquery', get_template_directory_uri() . '/assets/js/jquery.min.js', array(), $jquery_version, true); // true は footer で読み込む設定
+    $jquery_version = filemtime($jquery_file_path); 
+    wp_enqueue_script('jquery', get_template_directory_uri() . '/assets/js/jquery.min.js', array(), $jquery_version, true);
 
     wp_enqueue_script('jquery-ui', 'https://code.jquery.com/ui/1.14.1/jquery-ui.js', array('jquery'), null, false);
-    wp_enqueue_script('admin', get_template_directory_uri() . '/assets/js/admin.js', array('jquery', 'jquery-ui'), null, false);
+
+    $admin_file_path = get_template_directory() . '/assets/js/admin.js'; 
+    $admin_version = filemtime($admin_file_path);
+    wp_enqueue_script('admin', get_template_directory_uri() . '/assets/js/admin.js', array('jquery', 'jquery-ui'), $admin_version, false);
+
+    // ✅ `wp_localize_script()` で nonce と ajaxurl を JS に渡す
+    wp_localize_script('admin', 'navigationEdit', array(
+        'ajaxurl' => admin_url('admin-ajax.php'),
+        'nonce' => wp_create_nonce('navigation_edit_nonce'),
+    ));
 }
 add_action('admin_enqueue_scripts', 'enqueue_admin_javascript');
