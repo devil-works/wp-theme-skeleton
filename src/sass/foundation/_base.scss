@@ -1,3 +1,5 @@
+@use "../global/mixin" as gm;
+
 /* base
 --------------------------- */
 *,
@@ -24,6 +26,20 @@ body {
   min-width: 350px;
   width: 100%;
   overflow-x: hidden;
+  background-image: url(../img/background-white.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  @include gm.breakpoint(lg) {
+    background-image: url(../img/background-white.jpg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: repeat;
+    background-attachment: fixed;
+  }
+
 }
 
 img,

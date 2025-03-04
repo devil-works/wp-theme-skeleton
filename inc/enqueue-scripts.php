@@ -14,6 +14,14 @@ function enqueue_favicon_icons() {
 add_action('wp_head', 'enqueue_favicon_icons');
 
 /**
+ * 管理画面用のスタイルシートをエンキュー
+ */
+function enqueue_styleseets() {
+    echo '<link rel="stylesheet" href="' . get_template_directory_uri() . '/assets/css/style.css">';
+}
+add_action('wp_head', 'enqueue_styleseets');
+
+/**
  * JavaScript を読み込む
  */
 function enqueue_js() {

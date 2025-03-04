@@ -2,15 +2,15 @@
 
 // 不要なメニューを追加する
 function add_custom_menu_items() {
-	// add_menu_page(
-    //     'TOPページ',
-    //     'TOPページ',
-    //     'edit_posts',
-    //     'post.php?post=2346&action=edit', // リンク先URL
-    //     '',
-    //     'dashicons-admin-home', // アイコン
-    //     19 // メニューの位置
-    // );
+    add_menu_page(
+        'TOPページ編集',
+        'TOPページ編集',
+        'manage_options',
+        'top-page-settings',
+        'render_top_page_settings',
+        'dashicons-admin-generic',
+        21
+    );
 }
 add_action('admin_menu', 'add_custom_menu_items');
 

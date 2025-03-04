@@ -12,5 +12,6 @@ require_once get_template_directory() . '/inc/enqueue-scripts.php';
 
 // 管理画面のダッシュボードを編集
 if (is_admin()) {
+    require_once get_template_directory() . '/inc/admin-page.php';
     require_once get_template_directory() . '/inc/admin-navigation.php';
 }
