@@ -1,16 +1,15 @@
 @use "../global/mixin" as gm;
 
 .c-mobileNavButton {
-    display: none;
+    display: block;
     position: fixed;
     top: var(--base-size-96);
     right: var(--base-size-64);
     width: var(--base-size-80);
-    height: var(--base-size-28);
+    height: var(--base-size-64);
     background: transparent;
     border: none;
     cursor: pointer;
-    padding: 0;
     z-index: 3;
 
     &__line {
@@ -22,11 +21,11 @@
         transition: transform 0.3s ease-in-out;
 
         &:first-child {
-            top: 0;
+            top: var(--base-size-16);
         }
 
         &:last-child {
-            bottom: 0;
+            bottom: var(--base-size-16);
         }
     }
 
@@ -40,7 +39,8 @@
         }
     }
 
-    @media screen and (max-width: 768px) {
-        display: block;
+    @include gm.breakpoint(lg) {
+        display: none;
     }
+
 }

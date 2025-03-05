@@ -122,15 +122,33 @@
         <ul class="c-mobileNav__list">
             <li class="c-mobileNav__item">
                 <a href="/" class="c-mobileNav__link">
-                    <div class="cMenu__nav_item_text">
-                        <div class="cMenu__nav_item_text_en">TOP</div>
-
-                        <div class="cMenu__nav_item_text_ja">トップページ</div>
+                    <div class="c-mobileNav__item-text">
+                        <div class="c-mobileNav__item-text-en">TOP</div>
+                        <div class="c-mobileNav__item-text-ja">トップページ</div>
                     </div>
                 </a>
             </li>
             <li class="c-mobileNav__item">
-                <a href="#about" class="c-mobileNav__link">私たちについて</a>
+                <a href="/" class="c-mobileNav__link">
+                    <div class="c-mobileNav__item-text">
+                        <div class="c-mobileNav__item-text-en">LESSONS</div>
+                        <div class="c-mobileNav__item-text-ja">ウチマナベの教室</div>
+                    </div>
+                </a>
+                <ul>
+                  <li>
+                    <a href="">AAAA教室</a>
+                  </li>
+                  <li>
+                    <a href="">AAAA教室</a>
+                  </li>
+                  <li>
+                    <a href="">AAAA教室</a>
+                  </li>
+                </ul>
+            </li>
+            <li class="c-mobileNav__item">
+                <a href="#about" class="c-mobileNav__link">体験教室</a>
             </li>
             <li class="c-mobileNav__item">
                 <a href="#services" class="c-mobileNav__link">サービス</a>
