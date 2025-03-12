@@ -1,3 +1,7 @@
 @use "../global/mixin" as gm;
 
-.p-top {}
+.p-top {
+    &__read {
+        background-color: black;
+    }
+}

@@ -1,7 +1,7 @@
 jQuery(document).ready(function($) {
     const mobileNavButton = $(".c-mobileNavButton");
     const mobileNav = $(".c-mobileNav");
-    const mobileNavList = $(".c-mobileNav__list");
+    const mobileNavContainer = $(".c-mobileNav__container");
     const closeButton = $(".c-mobileNav__closeButton");
 
     function sleep(ms) {
@@ -15,14 +15,14 @@ jQuery(document).ready(function($) {
         if (!expanded) {
             mobileNav.addClass("is-open");
             await sleep(100); // 0.5s
-            mobileNavList.addClass("is-open");
+            mobileNavContainer.addClass("is-open");
         } else {
             mobileNav.css("transform", "translateX(-15vw)");
             await sleep(300); // 0.2s
             mobileNav.css("transform", "");
             mobileNav.removeClass("is-open");
             await sleep(100); // 0.1s
-            mobileNavList.removeClass("is-open");
+            mobileNavContainer.removeClass("is-open");
         }
     }
 

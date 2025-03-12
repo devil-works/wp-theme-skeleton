@@ -20,6 +20,7 @@
 <body <?php body_class(); ?>>
 	<div class="l-container">
       <header class="l-header">
+      <?php if (is_front_page()) : ?>
         <div class="l-header__inner">
           <a href="/" class="l-header__logo" aria-label="TOPへ戻る">
             <div class="l-header__logo-image">
@@ -133,7 +134,8 @@
             </div>
           </a>
         </div>
-		<?php get_template_part('template-parts/component/mobile-nav-button'); ?>
-		<?php get_template_part('template-parts/component/mobile-nav'); ?>
+        <?php endif ?>
+        <?php get_template_part('template-parts/component/mobile-nav-button'); ?>
+        <?php get_template_part('template-parts/component/mobile-nav'); ?>
       </header>
 	</div>

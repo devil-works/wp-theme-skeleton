@@ -1,3 +1,16 @@
 @use "../global/mixin" as gm;
 
-.c-link {}
+.c-link {
+    &__cv {
+        display: inline-block;
+        background: var(--c-button-cv);
+        color: #fff;
+        width: 100%;
+        padding: var(--base-size-36);
+        text-align: center;
+        border-radius: 3px;
+        font-size: var(--base-size-24);
+        letter-spacing: 0.15em;
+        line-height: 1;
+    }
+}

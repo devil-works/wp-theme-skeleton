@@ -15,7 +15,6 @@
         top: 30%;
         left: 50%;
         transform: translate(-50%, -30%);
-        text-decoration: none;
         display: block;
 
         &-image {
@@ -31,6 +30,8 @@
         }
 
         &-text {
+            position: relative;
+            top: calc(0px - var(--base-size-16));
             width: 100%;
             text-align: center;
             font-weight: 700;

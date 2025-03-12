@@ -1,3 +1,76 @@
 @use "../global/mixin" as gm;
 
-.l-footer {}
+.l-footer {
+    &__inner {
+        padding: 0 20px;
+    }
+
+    &__logo {
+        position: relative;
+        text-decoration: none;
+        color: inherit;
+
+        &-image {
+            display: block;
+            max-width: 220px;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        &-text {
+            text-align: center;
+            position: relative;
+            top: -20px;
+            font-weight: 700;
+        }
+    }
+
+    &__trial {
+        margin-top: 3rem;
+        margin-bottom: 1rem;
+
+        &-link {
+            text-decoration: none;
+            color: #fff;
+            background-color: orange;
+            padding: 10px 20px;
+            border-radius: 5px;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+
+            &-en {
+                font-size: 20px;
+                font-weight: 700;
+            }
+
+            &-ja {
+                font-size: 12px;
+            }
+        }
+    }
+
+    &__nav {
+        display: flex;
+        justify-content: center;
+        gap: 12px;
+
+        &-item {
+            margin: 0 10px;
+
+            &-link {
+                text-decoration: none;
+                color: #333;
+                font-size: 14px;
+                font-weight: 700;
+            }
+        }
+    }
+
+    &__copy {
+        display: block;
+        text-align: center;
+        margin-top: 3rem;
+        font-size: 12px;
+    }
+}
